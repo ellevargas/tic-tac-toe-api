@@ -140,7 +140,7 @@ A single [`Game`](#game) object, without the `id` property.
 The status code for a successful request will be `201`.
 
 ###### Data
-None.
+A single [`Game`](#game) object (the one that was created). This object has the complete details for the game, including the `board` property.
 
 ##### Errors
 The following status codes may be returned in the event of an error:

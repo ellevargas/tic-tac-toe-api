@@ -21,7 +21,9 @@ class GamesController < ApplicationController
 
     begin
       game.save!
-      head :created, location: game_url(game)
+      render json: game, fields: Game::DETAILS_FIELDS,
+             status: :created,
+             location: game_url(game)
     rescue
       render json: { errors: ["Could not persist Game to database"] },
              status: :internal_server_error
